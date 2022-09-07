@@ -21,8 +21,3 @@ export const ContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `
-
-export const FooterWrapper = styled.div`
-  background-color: #1e90ff;
-  width: 100%;
-`
