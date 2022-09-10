@@ -6,7 +6,7 @@ import {
   GPUType,
   MotherType,
   PSUType,
-  RAMType
+  MemoryType
 } from './buildComponent.types'
 
 export interface IBuild {
@@ -18,7 +18,7 @@ export interface IBuild {
     CPU: CPUType
     CPUFan: CPUFanType
     GPU?: GPUType
-    Memory: RAMType
+    Memory: MemoryType
     MemoryQty: number
     Motherboard: MotherType
     SSD?: DiskType

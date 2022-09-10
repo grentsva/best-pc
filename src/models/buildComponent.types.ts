@@ -19,21 +19,23 @@ export type CPUFanType = {
   Price: number
 }
 
-export type GPUType = RAMType & {
+export type GPUType = {
   Name: string
   Brand: 'Intel' | 'AMD' | 'NVIDIA'
   TechProcess: number
+  Type: string
+  Capacity: number
   Interface: number
   Power: string
   Price: number
 }
 
-export type RAMType = {
-  RAMName: string
+export type MemoryType = {
+  Name: string
   Type: string
   Frequency: number
   Capacity: number
-  RAMPrice: number
+  Price: number
 }
 
 export type MotherType = {

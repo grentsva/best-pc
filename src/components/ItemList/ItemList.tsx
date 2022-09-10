@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { IBuild } from '../../models/build.interface'
 import { BuildService } from '../../services/build.service'
-import { NeomorphismBox } from '../ui/Boxes'
 import { ContentWrapper } from '../ui/Wrappers'
 import Preloader from '../common/Preloader'
+import Item from './Item'
 
 const ItemList: React.FC = () => {
   const [items, setItems] = useState<IBuild[]>()
@@ -36,15 +36,9 @@ const ItemList: React.FC = () => {
     <ContentWrapper>
       {isLoadingBuilds && <Preloader />}
 
-      {items?.map(item => {
-        return (
-          <NeomorphismBox key={item.Id}>
-            <span>{item.Name}</span>
-            <span>{item.Price}</span>
-            <span>{item.Components.CPU}</span>
-          </NeomorphismBox>
-        )
-      })}
+      {items?.map(item => (
+        <Item {...item} key={item.Id} />
+      ))}
     </ContentWrapper>
   )
 }

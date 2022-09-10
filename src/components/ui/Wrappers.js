@@ -21,3 +21,8 @@ export const ContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+export const DetailWrapper = styled.div`
+  padding: 5px;
+  display: flex;
+`
