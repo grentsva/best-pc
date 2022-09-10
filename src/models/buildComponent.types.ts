@@ -1,27 +1,31 @@
 export type CPUType = {
   Name: string
   Brand: 'Intel' | 'AMD'
-  Frequency: string
-  FrequencyMax: string
+  Interface: number
+  Frequency: number
+  FrequencyMax: number
   Socket: string
-  TDP: string
+  TDP: number
   CoreQty: number
   ThreadQty: number
+  Price: number
 }
 
 export type CPUFanType = {
   Name: string
   Brand: string
   Socket: string
-  TDP: string
+  TDP: number
+  Price: number
 }
 
 export type GPUType = RAMType & {
   Name: string
   Brand: 'Intel' | 'AMD' | 'NVIDIA'
-  TechProcess: string
+  TechProcess: number
   Interface: number
   Power: string
+  Price: number
 }
 
 export type RAMType = {
@@ -29,13 +33,14 @@ export type RAMType = {
   Type: string
   Frequency: number
   Capacity: number
+  RAMPrice: number
 }
 
 export type MotherType = {
   Name: string
   Socket: string
   Chipset: string
-  Interfaces: string
+  Price: number
 }
 
 export type DiskType = {
@@ -44,6 +49,7 @@ export type DiskType = {
   Capacity: number
   ReadSpeed: number
   WriteSpeed: number
+  Price: number
 }
 
 export type CaseType = {
@@ -51,11 +57,12 @@ export type CaseType = {
   Type: string
   FanQty: number
   Color: string
-  Props: string
+  Price: number
 }
 
 export type PSUType = {
   Name: string
   Certificate: string
   Capasity: number
+  Price: number
 }

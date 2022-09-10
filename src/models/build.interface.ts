@@ -12,7 +12,6 @@ import {
 export interface IBuild {
   Id: number
   Name: string
-  Price?: number
   IsDeleted: boolean
   ImageUrl: string
   Components: {
@@ -22,7 +21,7 @@ export interface IBuild {
     Memory: RAMType
     MemoryQty: number
     Motherboard: MotherType
-    SSD: DiskType
+    SSD?: DiskType
     HDD?: DiskType
     Case: CaseType
     PSU: PSUType
